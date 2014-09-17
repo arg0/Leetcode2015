@@ -1,12 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 vector<int> twoSum(vector<int> &numbers, int target);
 
 int main(){
 	vector<int> numbers={2, 7, 11, 15};
 	int target=9;
-	cout<<twoSum(numbers,target);	
+	vector<int> result=twoSum(numbers,target);
+	cout<<result[0]<<" "<<result[1]<<endl;
 	return 0;
 }
 
