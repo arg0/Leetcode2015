@@ -10,14 +10,14 @@ struct ListNode {
 ListNode *insertionSortList(ListNode *head);
 
 int main(){
-	
+	cout<<"ACCEPT!";
 	return 0;
 }
 ListNode *insertionSortList(ListNode *head) {
 	ListNode *newhead=new ListNode(INT_MIN);
 	if(!head)
 		return NULL;
-		
+	newhead->next=head;
 	ListNode *cur=newhead;
 	for(ListNode *p=head->next,*prep=head;p!=NULL;prep=p,p=p->next)
 	{
@@ -33,7 +33,7 @@ ListNode *insertionSortList(ListNode *head) {
 			}	
 		}
 	}
-	ListNode res=newhead->next;
+	ListNode *res=newhead->next;
 	delete newhead;  
 	return res;
 }
