@@ -48,7 +48,7 @@ void Maxify(int a[],int i,int size){
 }
 
 void BuildHeap(int a[],int size){
-	for(int i=(size-1)/2;i>0;i--){
+	for(int i=(size-1)/2;i>=0;i--){
 		Maxify(a,i,size);
 	}
 }
@@ -57,7 +57,7 @@ void BuildHeap(int a[],int size){
 void HeapSort(int a[],int length){
 	int size=length;
 	BuildHeap(a,size);
-	for(int i=length-1;i>1;i--){
+	for(int i=length-1;i>0;i--){
 		exchange(a,0,i);
 		size--;
 		Maxify(a,0,size);
